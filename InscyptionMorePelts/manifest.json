@@ -1,0 +1,11 @@
+{
+    "name": "MorePelts",
+    "version_number": "0.3.0",
+    "website_url": "",
+    "description": "Adds more Pelts and more!",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1902",
+        "API_dev-API-2.10.0",
+        "MADH95Mods-JSONCardLoader-2.3.0"
+    ]
+}

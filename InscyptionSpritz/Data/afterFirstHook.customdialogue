@@ -1,0 +1,19 @@
+{
+    "$id": 0,
+    "$type": "0|SpritzMod.Scripts.Data.CustomDialogueData, SpritzMod",
+    "name": "after_first_hook",
+    "dialogue": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 2,
+                "$type": "2|SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod",
+                "message": "Keep Fish? Or hook Fresh Fish?",
+                "emotion": 0,
+                "letterAnimation": 0
+            }
+        ]
+    }
+}

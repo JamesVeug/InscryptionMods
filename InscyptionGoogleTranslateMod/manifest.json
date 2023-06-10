@@ -1,0 +1,10 @@
+{
+    "name": "GoogleTranslateMod",
+    "version_number": "0.3.0",
+    "website_url": "",
+    "description": "Google translates all mods so they can be be played by non-english speakers.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1902",
+        "API_dev-API-2.10.0"
+    ]
+}

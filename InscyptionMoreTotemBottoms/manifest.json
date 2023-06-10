@@ -1,0 +1,11 @@
+{
+    "name": "More Totem Bottoms",
+    "version_number": "0.1.0",
+    "website_url": "",
+    "description": "Adds a more custom totem bottoms to modify the game",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1902",
+        "API_dev-API-2.5.0",
+        "MADH95Mods-JSONCardLoader-2.1.0"
+    ]
+}

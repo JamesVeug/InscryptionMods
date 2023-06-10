@@ -1,0 +1,12 @@
+{
+    "name": "JSONExporter",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "Exports cards to JLDR",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1902",
+        "API_dev-API-2.8.1",
+        "MADH95Mods-JSONCardLoader-2.2.0"
+    ]
+}
+

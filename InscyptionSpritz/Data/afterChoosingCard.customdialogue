@@ -1,0 +1,19 @@
+{
+    "$id": 0,
+    "$type": "0|SpritzMod.Scripts.Data.CustomDialogueData, SpritzMod",
+    "name": "after_choosing_card",
+    "dialogue": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 2,
+                "$type": "2|SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod",
+                "message": "Good Fish.",
+                "emotion": "Neutral",
+                "letterAnimation": "None"
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "$id": 0,
+    "$type": "0|SpritzMod.Scripts.Data.CustomDialogueData, SpritzMod",
+    "name": "intro",
+    "dialogue": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.List`1[[SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod]], mscorlib",
+        "$rlength": 1,
+        "$rcontent": [
+            {
+                "$id": 2,
+                "$type": "2|SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod",
+                "message": "Hmph. You have bait?",
+                "emotion": 0,
+                "letterAnimation": 0
+            },
+            {
+                "$id": 3,
+                "$type": "2|SpritzMod.Scripts.Data.CustomDialogueDataMessage, SpritzMod",
+                "message": "Time to fish.",
+                "emotion": 0,
+                "letterAnimation": 1
+            }
+        ]
+    }
+}

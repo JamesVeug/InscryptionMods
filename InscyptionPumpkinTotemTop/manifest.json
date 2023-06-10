@@ -1,0 +1,11 @@
+{
+    "name": "PumpkinTotemTopMod",
+    "version_number": "1.0.3",
+    "website_url": "",
+    "description": "Changes any custom totem tops to a pumpkin. Use API Configs to change vanilla totem tops too!",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1902",
+        "API_dev-API-2.7.2",
+        "MADH95Mods-JSONCardLoader-2.1.0"
+    ]
+}
