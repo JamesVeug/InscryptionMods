@@ -36,13 +36,13 @@
         <PackageReference Include="UnityEngine.Modules" Version="2019.4.24" />
     </ItemGroup>
 
+
     <ItemGroup>
       <Reference Include="InscryptionAPI">
-        <HintPath>libs\InscryptionAPI.dll</HintPath>
-        <Private>False</Private>
+        <HintPath>..\..\InscryptionAPI\InscryptionAPI\bin\Debug\InscryptionAPI.dll</HintPath>
       </Reference>
       <Reference Include="InscryptionCommunityPatch">
-        <HintPath>C:\Users\james\AppData\Roaming\Thunderstore Mod Manager\DataFolder\Inscryption\profiles\All\BepInEx\plugins\API_dev-API\InscryptionCommunityPatch.dll</HintPath>
+        <HintPath>..\..\InscryptionAPI\InscryptionCommunityPatch\bin\Debug\InscryptionCommunityPatch.dll</HintPath>
       </Reference>
     </ItemGroup>
 

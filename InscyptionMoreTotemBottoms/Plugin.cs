@@ -4,6 +4,7 @@ using DiskCardGame;
 using HarmonyLib;
 using InscryptionAPI.Card;
 using InscryptionAPI.Helpers;
+using InscryptionAPI.Localizing;
 using InscryptionAPI.Totems;
 using UnityEngine;
 
@@ -27,92 +28,35 @@ namespace MoreTotemBottoms
             PluginDirectory = this.Info.Location.Replace("MoreTotemBottoms.dll", "");
 
             new Harmony(PluginGuid).PatchAll();
-            CustomTotemBottoms();
+            //CustomTotemBottoms();
+
+            var font = LocalizationManager.GetFontReplacementForFont(LocalizationManager.FontReplacementType.DaggerSquare);
+
+            List<FontReplacement> fonts = new List<FontReplacement>();
+            foreach (LocalizationManager.FontReplacementType fontReplacementType in Enum.GetValues(typeof(LocalizationManager.FontReplacementType)))
+            {
+	            fonts.Add(LocalizationManager.GetFontReplacementForFont(fontReplacementType, font.replacementFont, font.replacementTMPFont));
+            }
+            
+            string stringtablepath = Path.Combine(PluginDirectory, "stringtable.csv");
+            LocalizationManager.NewLanguage(PluginGuid, "Derk", "Derk", "Reset With Polish", stringtablepath, fonts);
 
 
             Logger.LogInfo($"Loaded {PluginName}!");	        
         }
 
-        private void CustomTotemBottoms()
-        {
-	       // Texture2D boneTexture = TextureHelper.GetImageAsTexture(Path.Combine(PluginDirectory, "Art/bones_bottom.png"));
-	       // TotemManager.NewBottomPiece<GainBonesTrigger>(PluginGuid, "boneybottom", "Gives you 4 bones when a card is drawn", boneTexture);
+        // private void CustomTotemBottoms()
+        // {
+	       // byte[] resourceBytes = TextureHelper.GetResourceBytes("totembottom_doublesigil", typeof(Plugin).Assembly);
+	       // if (!AssetBundleHelper.TryGet(resourceBytes, "TotemBottomDoubleSigil", out GameObject go))
+	       // {
+		      //  Logger.LogInfo($"Could not load asset bundle!");
+		      //  return;
+	       // }
 	       //
-	       // Texture2D duplicateTexture = TextureHelper.GetImageAsTexture(Path.Combine(PluginDirectory, "Art/drawcopy_bottom.png"));
-	       // TotemManager.NewBottomPiece<DuplicateTrigger>(PluginGuid, "copybottom", "Gives you a copy of the card when drawn", duplicateTexture);
-	       //
-	       // Texture2D powerTexture = TextureHelper.GetImageAsTexture(Path.Combine(PluginDirectory, "Art/power_bottom.png"));
-	       // TotemManager.NewBottomPiece<PowerBuffStatEffect>(PluginGuid, "powerbottom", "Adds 1 power to the drawn card", powerTexture);
-		      //  
-	       // Texture2D healthTexture = TextureHelper.GetImageAsTexture(Path.Combine(PluginDirectory, "Art/health_bottom.png"));
-	       // TotemManager.NewBottomPiece<HealthBuffStatEffect>(PluginGuid, "healthbottom", "Adds 2 health to the drawn card", healthTexture);
-		       
-	       byte[] resourceBytes = TextureHelper.GetResourceBytes("totembottom_doublesigil", typeof(Plugin).Assembly);
-	       if (!AssetBundleHelper.TryGet(resourceBytes, "TotemBottomDoubleSigil", out GameObject go))
-	       {
-		       Logger.LogInfo($"Could not load asset bundle!");
-		       return;
-	       }
-	       
-	       DoubleSigilEffect.ID = TotemManager.NewBottomPiece<DoubleSigilTrigger, DoubleSigilEffect>(PluginGuid, "healthbottom",
-			       "Adds 2 health to the drawn card", go)
-		       .SetCompositeTotemPieceType(typeof(DoubleSigilComponentPiece)).EffectID;
-        }
+	       // DoubleSigilEffect.ID = TotemManager.NewBottomPiece<DoubleSigilTrigger, DoubleSigilEffect>(PluginGuid, "healthbottom",
+			     //   "Adds 2 health to the drawn card", go)
+		      //  .SetCompositeTotemPieceType(typeof(DoubleSigilComponentPiece)).EffectID;
+        // }
     }
-    
-    /*[HarmonyPatch(typeof(CardExtensions), nameof(CardExtensions.BloodCost))]
-    internal static class CardExtensions_BloodCost
-    {
-	    public static void Postfix(PlayableCard card, ref int __result)
-	    {
-		    int enumerable = BoardManager.Instance.playerSlots.Count((a) => a.Card != null);
-		    if (enumerable > 0)
-		    {
-			    __result = 4;
-		    }
-	    }
-    }
-    
-    [HarmonyPatch(typeof(CardExtensions), nameof(CardExtensions.BonesCost))]
-    internal static class CardExtensions_BonesCost
-    {
-	    public static void Postfix(PlayableCard card, ref int __result)
-	    {
-		    int enumerable = BoardManager.Instance.playerSlots.Count((a) => a.Card != null);
-		    if (enumerable > 0)
-		    {
-			    __result = 8;
-		    }
-	    }
-    }
-    
-    [HarmonyPatch(typeof(CardExtensions), nameof(CardExtensions.GemsCost))]
-    internal static class CardExtensions_GemsCost
-    {
-	    public static void Postfix(PlayableCard card, ref List<GemType> __result)
-	    {
-		    int enumerable = BoardManager.Instance.playerSlots.Count((a) => a.Card != null);
-		    if (enumerable > 0)
-		    {
-			    __result = new List<GemType>()
-			    {
-				    GemType.Blue,
-				    GemType.Orange
-			    };
-		    }
-	    }
-    }
-    
-    [HarmonyPatch(typeof(PlayableCard), nameof(PlayableCard.EnergyCost), MethodType.Getter)]
-    internal static class CardExtensions_EnergyCost
-    {
-	    public static void Postfix(ref int __result)
-	    {
-		    int enumerable = BoardManager.Instance.playerSlots.Count((a) => a.Card != null);
-		    if (enumerable > 0)
-		    {
-			    __result = 2;
-		    }
-	    }
-    }*/
 }
