@@ -1,0 +1,10 @@
+{
+    "name": "GoobertExtended",
+    "version_number": "1.2.0",
+    "website_url": "",
+    "description": "Extends the things Goobert can change a Card by and adds configs for further modification.",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701",
+        "API_dev-API-2.17.0"
+    ]
+}
