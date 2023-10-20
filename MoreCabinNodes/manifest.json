@@ -1,0 +1,10 @@
+{
+    "name": "MoreCabinNodes",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "Adds more nodes to choose from before fighting Leshy in act 1",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701",
+        "API_dev-API-2.18.1"
+    ]
+}
