@@ -1,0 +1,6 @@
+{
+  "maskName": "JSON_Carry",
+  "type": "Random",
+  "texturePath": "carry.png",
+  "maskType": "Prospector"
+}

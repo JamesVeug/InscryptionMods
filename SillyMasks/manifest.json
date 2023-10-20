@@ -1,0 +1,11 @@
+{
+    "name": "SillyMask",
+    "version_number": "1.0.0",
+    "website_url": "https://github.com/JamesVeug/InscryptionMods",
+    "description": "Changes vanilla masks in Act1 to silly masks",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701",
+        "API_dev-API-2.18.1",
+        "MADH95Mods-JSONCardLoader-2.5.0"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+  "maskName": "JSON_Chef",
+  "type": "Random",
+  "texturePath": "chef.png",
+  "maskType": "Trader"
+}

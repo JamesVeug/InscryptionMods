@@ -1,0 +1,1 @@
+Changes all vanilla masks to be a silly mask
