@@ -123,14 +123,14 @@ public static class RandomOptions
 			{
 				// TODO: Change all abilities on a mod....
 				int index = SeededRandom.Range(0, modsWithAbilities[0].abilities.Count, Plugin.Patches.Seed++);
-				//Plugin.Log.LogInfo($"Changing mod {modsWithAbilities[0].abilities[index]} to {replacement}");
+				Plugin.Log.LogInfo($"Changing mod {modsWithAbilities[0].abilities[index]} to {replacement}");
 				modsWithAbilities[0].abilities[index] = replacement;
 				modsWithAbilities.RemoveAt(0);
 			}
 			else
 			{
 				int index = vanillaAbilitiesIndex[0];
-				//Plugin.Log.LogInfo($"Changing vanilla {vanillaAbilities[index]} to {replacement}");
+				Plugin.Log.LogInfo($"Changing vanilla {vanillaAbilities[index]} to {replacement}");
 				vanillaAbilities[index] = replacement;
 				vanillaAbilitiesIndex.RemoveAt(0);
 			}

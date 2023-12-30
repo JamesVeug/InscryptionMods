@@ -1,3 +1,9 @@
+## 1.2.2
+- Fixed goobert mods also affecting original card
+
+## 1.2.1
+- Fixed mods not appearing on cards created by Goobert
+
 ## 1.2.0
 - Goobert no longer removes a sigil
 - Goobert can now change/add a tribe
