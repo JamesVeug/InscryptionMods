@@ -16,6 +16,22 @@ public static class TemporaryCardInfo
                cardInfo.Mods.Any(a => !string.IsNullOrEmpty(a.singletonId) && a.singletonId.StartsWith("temporary_card"));
     }
 
+    public static bool TryGetTemporaryCardTemplateName(this CardInfo cardInfo, out string id)
+    {
+        // Looks for a mod with a temporary_card singleton id
+        // Extracts the name from the id and returns true if it exists
+        id = GetTemporaryCardTemplateName(cardInfo);
+        return id != null;
+    }
+
+    public static string GetTemporaryCardTemplateName(this CardInfo cardInfo)
+    {
+        // Looks for a mod with a temporary_card singleton id
+        // Extracts the name from the id and returns true if it exists
+        var mod = cardInfo.Mods.Find((a) => !string.IsNullOrEmpty(a.singletonId) && a.singletonId.StartsWith("temporary_card"));
+        return mod != null ? mod.singletonId.Substring("temporary_card|".Length) : cardInfo.name;
+    }
+
     public static CardInfo CloneAsTemporaryCard(this CardInfo templateCardInfo)
     {
         int value = ModdedSaveManager.RunState.GetValueAsInt(Plugin.PluginGuid, "TotalTempCards") + 1;
