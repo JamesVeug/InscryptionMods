@@ -1,3 +1,6 @@
+## 1.3.0
+- Can now merge cloned cards together
+
 ## 1.2.2
 - Fixed goobert mods also affecting original card
 

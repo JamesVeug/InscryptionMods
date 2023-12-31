@@ -1,6 +1,6 @@
 {
     "name": "GoobertExtended",
-    "version_number": "1.2.2",
+    "version_number": "1.3.0",
     "website_url": "https://github.com/JamesVeug/InscryptionMods",
     "description": "Extends the things Goobert can change a Card by and adds configs for further modification.",
     "dependencies": [
