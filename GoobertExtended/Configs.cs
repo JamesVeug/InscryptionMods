@@ -8,6 +8,12 @@ public static class Configs
     
     public static ConfigEntry<bool> SuperMode = Bind("General", "Crazy Mode", false,
         "Increases all values so Goobert will make lots of crazy changes.");
+
+    public static ConfigEntry<int> ChanceOfCardReplacement = Bind("General", "Chance to card replaced", 25,
+        "Chance for Goobert to do a bad job painting and give you a different card", new AcceptableValueRange<int>(0, 100));
+
+    public static ConfigEntry<string> CardReplacements = Bind("General", "Card replacements", "RingWorm, Opossum",
+        "Cards Goobert gives you if he does a bad job");
     
     public static ConfigEntry<bool> DisablePaintDecal = Bind("General", "Disable Paint Decal", false,
         "Stops Goobert from adding the green paint all over the cards");
