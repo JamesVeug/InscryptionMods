@@ -1,5 +1,7 @@
 Extends the things Goobert can change a Card with.
-See configs to easily modify the randomization
+
+See configs to easily chance what Goobert can do!
+
 
 # Modifications (1 of these will happen to a card)
 - Changes name slightly
@@ -13,6 +15,11 @@ See configs to easily modify the randomization
 - Change random amount of Sigils
 - Add 1 Random Sigil
 - Add 1 Random Tribe
+
+
+# Misc
+- Goobert has a 25% chance to fail at painting the card and give you a replacement instead.
+
 
 # Crazy Mode (2 of these will happen to a card - Turn on in configs)
 - **All Modifications can happen at most 2 times!**

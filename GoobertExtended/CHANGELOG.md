@@ -1,3 +1,6 @@
+## 1.4.0
+- Goobert has a 25% chance to fail at painting the card and give you a replacement instead
+
 ## 1.3.0
 - Can now merge cloned cards together
 
